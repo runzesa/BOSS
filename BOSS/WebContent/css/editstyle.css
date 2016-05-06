@@ -1,0 +1,138 @@
+/*设置页面样式*/
+BODY {	FONT-SIZE: 9pt; 
+	scrollbar-arrow-color:#00BBE8;
+	scrollbar-base-color:#7BABC1;
+	scrollbar-shadow-color:#ffffff;
+	scrollbar-face-color:#ffffff;
+	scrollbar-highlight-color:#00BBE8;
+	scrollbar-dark-shadow-color:#00BBE8B;
+	scrollbar-3d-light-color:#00BBE8B;} 
+		
+/*设置文字样式*/
+a            { text-decoration: none; color:  #ffffff ;FONT-SIZE: 9pt }		
+a:link       { text-decoration: none; color:  #ffffff ;FONT-SIZE: 9pt }
+a:visited    { text-decoration: none; color: #ffffff ;FONT-SIZE: 9pt }
+a:active     { text-decoration: none; color:  #0000ff; font-weight: bold ;FONT-SIZE: 9pt}
+a:hover      { text-decoration: underline; color: #000000 ;FONT-SIZE: 9pt}
+P {FONT-FAMILY: "宋体", "Arial", "Times New Roman"; FONT-SIZE: 9pt}
+font {FONT-SIZE: 9pt}
+
+/*设置按钮样式*/
+button {
+       	padding-left: 4px;
+		padding-right: 4px
+		padding-top: 1px;
+		padding-bottom: 1px;
+		background-color: #F8AD8D}
+		
+.btn1_mouseover {
+BORDER-RIGHT: #00AFE8 0px solid; PADDING-RIGHT: 0px; BORDER-TOP: 
+#00AFE8 0px solid; PADDING-LEFT: 0px; FONT-SIZE: 12px; FILTER: 
+progid:DXImageTransform.Microsoft.Gradient(GradientType=0, 
+StartColorStr=#00AFE8, EndColorStr=#00AFE8); BORDER-LEFT: #00AFE8 
+0px solid; CURSOR: hand; COLOR:black; PADDING-TOP: 0px; 
+BORDER-BOTTOM: #00AFE8 0px solid
+} 
+.btn1_mouseout {
+BORDER-RIGHT: #00AFE8 0px solid; PADDING-RIGHT: 0px; BORDER-TOP: 
+#00AFE8 0px solid; PADDING-LEFT: 0px; FONT-SIZE: 12px; FILTER: 
+progid:DXImageTransform.Microsoft.Gradient(GradientType=0, 
+StartColorStr=#00AFE8, EndColorStr=#00AFE8); BORDER-LEFT: #00AFE8 
+0px solid; CURSOR: hand; COLOR: white; PADDING-TOP: 0px; 
+BORDER-BOTTOM: #00AFE8 0px solid
+} 
+	
+input {
+	border:1px solid #7BABC1
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	background-color: #FFFFFF;
+	font-size:9pt; color:#000000 
+}
+		
+input.smallInput{
+	border: 1px solid #7BABC1;
+	border-bottom-width:1px;
+	border-top-width:0px;
+	border-left-width:0px;
+	border-right-width:0px; 	
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	background-color: #F3F8FA;
+	font-size:9pt; 
+	color:#000000 
+}	
+
+/*设置下拉框样式*/
+select { 
+	font-size: 9pt;
+	border: 2px solid #7BAAC6;
+	padding-left: 1px;
+	padding-right:1px; 
+	padding-top: 1px; 
+	padding-bottom: 1px; 
+} 
+
+/*设置图片样式*/
+img {
+	border: 0;
+}
+
+/*设置单元格样式*/
+TD {
+	FONT-FAMILY: "宋体", "Arial", "Times New Roman"; 
+	FONT-SIZE: 9pt
+}
+
+/*设置工具栏div的属性*/
+.toolBar{
+	text-align : center;	
+}
+
+.toolBar img{
+	border: 0;
+	width:16;
+	height:16
+}
+
+/*设置工具栏表格属性*/
+.toolBarTable{
+	width:98%;
+	height:26;
+	background-image: url('../images/ys_bg.gif'); 
+	background-repeat: repeat-x;
+	border: 0px solid #7BABC1;
+}
+
+/*设置数据区div的属性*/
+.editData{
+	text-align : center;	
+}
+
+/*设置数据表格的样式*/
+.editDataTable{
+	width:98%;
+	fason:expression(cellSpacing=1,cellPadding=0);
+	border: 1px solid #7BABC1;
+}
+
+.cell1{
+	height:26;
+	background-color: #D9EEFD;
+}
+
+.cell2{
+	height:26;
+	background-color: #F1F9FE;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,176 @@
+/*设置页面样式*/
+BODY {	FONT-SIZE: 9pt; 
+	scrollbar-arrow-color:#1C3645;
+	scrollbar-base-color:#ffffff;
+	scrollbar-shadow-color:#1C3645;
+	scrollbar-face-color:#ffffff;
+	scrollbar-highlight-color:#ffffff;
+	scrollbar-dark-shadow-color:#ffffff;
+	scrollbar-3d-light-color:#ffffff;} 
+		
+/*设置链接及文字样式*/
+a            { text-decoration: none; color:  #ffffff ;FONT-SIZE: 9pt }
+a:visited    { text-decoration: none; color: #ffffff ;FONT-SIZE: 9pt }
+a:active     { text-decoration: none; color:  #0000ff;FONT-SIZE: 9pt}
+a:hover      { text-decoration: underline; color: #000000 ;FONT-SIZE: 9pt}
+P {FONT-FAMILY: "宋体", "Arial", "Times New Roman"; FONT-SIZE: 9pt}
+font {FONT-SIZE: 9pt}
+
+/*设置按钮样式*/
+button {
+	border: 1px solid #A2A2A2
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+		
+input {
+	border: 1px solid #A2A2A2
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-size:9pt;
+	color:#000000
+}
+
+/*设置下拉框样式*/
+select { 
+	font-size: 9pt;
+	border: 1px solid #A2A2A2;
+	padding-left: 4px;
+	padding-right:4px; 
+	padding-top: 1px; 
+	padding-bottom: 1px; 
+	background-color: #F2F4FB
+}
+
+/*设置图片样式*/
+img{
+	border: 0;
+}
+
+/*设置单元格样式*/
+TD {
+	FONT-FAMILY: "宋体", "Arial", "Times New Roman"; 
+	FONT-SIZE: 9pt
+}
+
+
+
+/*设置工具栏div的属性*/
+.toolBar{
+	text-align : center;	
+}
+
+
+/*设置工具栏表格属性*/
+.toolBarTable{
+	fason:expression(cellSpacing=0,cellPadding=0);
+	width:98%;
+	height:36;
+	border: 0px solid #7BABC1;
+}
+
+.toolBarTable td{
+	background-image: url('../images/b_s_02.gif'); 
+	background-repeat: repeat-x
+}
+
+
+/*设置翻页工具栏样式*/
+.pageBar{
+	fason:expression(cellSpacing=0,cellPadding=0);
+	width:98%;
+	height:28;
+	border: 0px solid #7BABC1; 
+	text-align : right;
+}
+
+.pageBar td{
+	background-image:url('../images/b_x_02.gif');
+}
+
+/*设置数据区div的样式*/
+.selectDiv{
+	text-align : center;	
+}
+
+/*设置数据区div滚动条的样式*/
+.dataDiv{
+	scrollbar-arrow-color:#ffffff;
+	scrollbar-base-color:#7BABC1;
+	scrollbar-shadow-color:#ffffff;
+	scrollbar-face-color:#7BABC1;
+	scrollbar-highlight-color:#ffffff;
+	scrollbar-dark-shadow-color:#7BABC1;
+	scrollbar-3d-light-color:#7BABC1;	
+}
+
+/*设置数据表格的样式*/
+.dataTable{
+	fason:expression(cellSpacing=1,cellPadding=0);
+	width:98%;
+	border: 1px solid #7BABC1;
+}
+
+.dataTable a{
+	text-decoration: none; 
+	color:  #000000 ;
+	FONT-SIZE: 9pt 
+}
+.dataTable a:visited{
+	text-decoration: none;
+	color: #000000 ;
+	FONT-SIZE: 9pt 
+}
+
+/*设置数据行样式*/
+.row1{
+	background-color: #D9EEFD;
+  	/*设置onmouseover事件*/
+  	onmouseover: expression(onmouseover=function ()
+  	{	this.style.borderColor ='';
+   		this.style.color='';
+   		this.style.backgroundColor ='#EFEFEF'});
+
+ 	/*设置onmouseout事件*/
+  	onmouseout: expression(onmouseout=function ()
+  	{	this.style.borderColor='';
+  		this.style.color='';
+  		this.style.backgroundColor =''});
+  		
+}
+
+/*设置数据行样式*/
+.row2{
+	background-color: #F3F8FA;
+  	/*设置onmouseover事件*/
+  	onmouseover: expression(onmouseover=function ()
+  	{	this.style.borderColor ='';
+   		this.style.color='';
+   		this.style.backgroundColor ='#EFEFEF'});
+
+ 	/*设置onmouseout事件*/
+  	onmouseout: expression(onmouseout=function ()
+  	{	this.style.borderColor='';
+  		this.style.color='';
+  		this.style.backgroundColor =''});
+}
+
+/*设置被锁定的表头的样式*/
+.lockhead{
+	position: relative; 
+	top: expression(this.offsetParent.scrollTop); 
+	height:25px;
+}
+
+.lockhead td{
+	background-color: #A7D8FB ;
+	text-align : center;
+}
+
+.lockhead img{
+	cursor:hand;
+}

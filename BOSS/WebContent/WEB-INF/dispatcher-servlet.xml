@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="GB2312"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="http://www.springframework.org/schema/beans    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd    http://www.springframework.org/schema/context    http://www.springframework.org/schema/context/spring-context-3.0.xsd    http://www.springframework.org/schema/aop    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+  <!-- util start -->
+  <bean name="/util/uploadfile.do" class="com.genius.util.UploadFile" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/util/validataimage.do" class="com.genius.util.ValidateImage" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <!-- util end -->
+  <!-- adminmanager start -->
+  <bean name="/adminmanager/login/login.do" class="com.genius.adminmanager.login.action.LoginAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/loginout.do" class="com.genius.adminmanager.login.action.LoginOutAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/developer_login.do" class="com.genius.adminmanager.login.action.DeveloperLoginAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/userinfo/passwordupdate.do" class="com.genius.adminmanager.userinfo.action.PasswordUpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/department/select.do" class="com.genius.adminmanager.department.action.DepartmentSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/department/departmentinsert.do" class="com.genius.adminmanager.department.action.DepartmentInsertAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/department/departmentinsertselect.do" class="com.genius.adminmanager.department.action.DepartmentInsertSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/department/departmentupdate.do" class="com.genius.adminmanager.department.action.DepartmentUpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/department/departmentupdateselect.do" class="com.genius.adminmanager.department.action.DepartmentUpdateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/department/departmentdelete.do" class="com.genius.adminmanager.department.action.DepartmentDeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/userinfo/select.do" class="com.genius.adminmanager.userinfo.action.UserinfoSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/userinfo/userinfoinsertselect.do" class="com.genius.adminmanager.userinfo.action.UserinfoInsertSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/userinfo/userinfoinsert.do" class="com.genius.adminmanager.userinfo.action.UserinfoInsertAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/userinfo/userinfoupdateselect.do" class="com.genius.adminmanager.userinfo.action.UserinfoUpdateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/userinfo/userinfoupdate.do" class="com.genius.adminmanager.userinfo.action.UserinfoUpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/userinfo/userinfodelete.do" class="com.genius.adminmanager.userinfo.action.UserinfoDeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/module/select.do" class="com.genius.adminmanager.module.action.ModuleSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/module/moduleinsert.do" class="com.genius.adminmanager.module.action.ModuleInsertAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/module/moduleinsertselect.do" class="com.genius.adminmanager.module.action.ModuleInsertSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/module/moduleupdate.do" class="com.genius.adminmanager.module.action.ModuleUpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/module/moduleupdateselect.do" class="com.genius.adminmanager.module.action.ModuleUpdateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/module/moduledelete.do" class="com.genius.adminmanager.module.action.ModuleDeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/operate/select.do" class="com.genius.adminmanager.operate.action.OperateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/operate/operateinsert.do" class="com.genius.adminmanager.operate.action.OperateInsertAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/operate/operateinsertselect.do" class="com.genius.adminmanager.operate.action.OperateInsertSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/operate/operateupdate.do" class="com.genius.adminmanager.operate.action.OperateUpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/operate/operateupdateselect.do" class="com.genius.adminmanager.operate.action.OperateUpdateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/operate/operatedelete.do" class="com.genius.adminmanager.operate.action.OperateDeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/operate/operatepower.do" class="com.genius.adminmanager.operate.action.OperatePowerAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/operate/operatepowerinit.do" class="com.genius.adminmanager.operate.action.OperatePowerInitAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/role/select.do" class="com.genius.adminmanager.role.action.RoleSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/role/roleinsert.do" class="com.genius.adminmanager.role.action.RoleInsertAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/role/roleinsertselect.do" class="com.genius.adminmanager.role.action.RoleInsertSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/role/roleupdate.do" class="com.genius.adminmanager.role.action.RoleUpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/role/roleupdateselect.do" class="com.genius.adminmanager.role.action.RoleUpdateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/role/roledelete.do" class="com.genius.adminmanager.role.action.RoleDeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/power/select.do" class="com.genius.adminmanager.power.action.PowerSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/power/powerinsert.do" class="com.genius.adminmanager.power.action.PowerInsertAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/power/powerinsertselect.do" class="com.genius.adminmanager.power.action.PowerInsertSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/power/powerupdate.do" class="com.genius.adminmanager.power.action.PowerUpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/power/powerupdateselect.do" class="com.genius.adminmanager.power.action.PowerUpdateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/power/powerdelete.do" class="com.genius.adminmanager.power.action.PowerDeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/loglogin/select.do" class="com.genius.adminmanager.loglogin.action.LogloginSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/logoperate/select.do" class="com.genius.adminmanager.logoperate.action.LogoperateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/logoperate/selectmore.do" class="com.genius.adminmanager.logoperate.action.LogoperatemoreSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/useronline/select.do" class="com.genius.adminmanager.useronline.action.UserxSelect" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/dataanalysis/select.do" class="com.genius.adminmanager.dataanalysis.action.DataASelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/dataanalysis/datainsertselect.do" class="com.genius.adminmanager.dataanalysis.action.DataAInsertSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/dataanalysis/datainsert.do" class="com.genius.adminmanager.dataanalysis.action.DataAInsertAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/dataanalysis/datadelete.do" class="com.genius.adminmanager.dataanalysis.action.DataADeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/dataanalysis/dataupdate.do" class="com.genius.adminmanager.dataanalysis.action.DataAUpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/dataanalysis/dataupdateselect.do" class="com.genius.adminmanager.dataanalysis.action.DataAUpdateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/dataanalysis/getfields.do" class="com.genius.adminmanager.dataanalysis.action.DataAGetFieldsAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/checkIndex.do" class="com.genius.adminmanager.left.action.LeftCheckIndexAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/getleft.do" class="com.genius.adminmanager.left.action.GetLeft" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/select.do" class="com.genius.adminmanager.left.action.LeftSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/leftinsert.do" class="com.genius.adminmanager.left.action.LeftInsertAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/leftinsertselect.do" class="com.genius.adminmanager.left.action.LeftInsertSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/leftupdate.do" class="com.genius.adminmanager.left.action.LeftUpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/leftupdateselect.do" class="com.genius.adminmanager.left.action.LeftUpdateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/leftdelete.do" class="com.genius.adminmanager.left.action.LeftDeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/configtitles.do" class="com.genius.adminmanager.left.action.ConfigTopLinkAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/titlelink/select.do" class="com.genius.adminmanager.titlelink.action.TitleLinkSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/titlelink/insertselect.do" class="com.genius.adminmanager.titlelink.action.TitleLinkInsertSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/titlelink/insert.do" class="com.genius.adminmanager.titlelink.action.TitleLinkInsertAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/titlelink/delete.do" class="com.genius.adminmanager.titlelink.action.TitleLinkDeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/titlelink/update.do" class="com.genius.adminmanager.titlelink.action.TitleLinkUpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/titlelink/updateselect.do" class="com.genius.adminmanager.titlelink.action.TitleLinkUpdateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/userinfo/selecttree.do" class="com.genius.adminmanager.userinfo.action.UserinfoTreeAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/operate/selecttree.do" class="com.genius.adminmanager.operate.action.OperateTreeAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/getuserleft.do" class="com.genius.adminmanager.left.action.SelectUserleftAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/userinfo/departmentSign.do" class="com.genius.adminmanager.department.action.DepartmentSignAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/userinfo/departmentdelete.do" class="com.genius.adminmanager.userinfo.action.DepartmentDeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/userinfo/userinfosign.do" class="com.genius.adminmanager.userinfo.action.UserinfoSignAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/userinfo/selectdelete.do" class="com.genius.adminmanager.userinfo.action.UserinfoSelectDeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/module2/select.do" class="com.genius.adminmanager.module2.action.Module2SelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/module2/moduleinsert.do" class="com.genius.adminmanager.module2.action.Module2InsertAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/module2/moduleinsertselect.do" class="com.genius.adminmanager.module2.action.Module2InsertSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/module2/moduleupdate.do" class="com.genius.adminmanager.module2.action.Module2UpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/module2/moduleupdateselect.do" class="com.genius.adminmanager.module2.action.Module2UpdateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/module2/moduledelete.do" class="com.genius.adminmanager.module2.action.Module2DeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/power_new/select.do" class="com.genius.adminmanager.power_new.action.Power_newSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/power_new/powerinsert.do" class="com.genius.adminmanager.power_new.action.Power_newInsertAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/power_new/powerinsertselect.do" class="com.genius.adminmanager.power_new.action.Power_newInsertSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/power_new/powerupdate.do" class="com.genius.adminmanager.power_new.action.Power_newUpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/power_new/powerupdateselect.do" class="com.genius.adminmanager.power_new.action.Power_newUpdateSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/power_new/powerdelete.do" class="com.genius.adminmanager.power_new.action.Power_newDeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/selecttree.do" class="com.genius.adminmanager.left.action.LeftTreeSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/selectrole.do" class="com.genius.adminmanager.left.action.RoleSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/adminmanager/left/updateroleinfo.do" class="com.genius.adminmanager.left.action.RoleUpdateAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <!-- adminmanager end -->
+  <!-- personal start -->
+  <bean name="/personalsettings/updatePWD.do" class="com.genius.personalsettings.action.UpdatePWDAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/personalsettings/updateUserinfoSelect.do" class="com.genius.personalsettings.action.UpdateUserinfoSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/personalsettings/updateUserinfo.do" class="com.genius.personalsettings.action.UpdateUserinfoAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/personalsettings/updateLeftSelect.do" class="com.genius.personalsettings.action.UpdateLeftSelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/personalsettings/updateLeftSelectChild.do" class="com.genius.personalsettings.action.UpdateLeftSelectChildAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/personalsettings/updateLeft.do" class="com.genius.personalsettings.action.UpdateLeftAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/personalsettings/deleteLeft.do" class="com.genius.personalsettings.action.DeleteLeftAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/portal/index/selectmodelstyle.do" class="com.genius.portal.dataanalysis.action.SelectModelStyleAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/portal/index/savemodelstyle.do" class="com.genius.portal.dataanalysis.action.SaveModelStyleAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/portal/index/modelstylecustom.do" class="com.genius.portal.dataanalysis.action.SelectModelStyleCustomAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/portal/index/initmodel.do" class="com.genius.portal.dataanalysis.action.InitModel" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <!-- personal end -->
+  <!-- search start -->
+  <!-- tablelist -->
+  <bean name="/search/tl_select.do" class="com.genius.search.tablelist.action.SelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/tl_insertnew.do" class="com.genius.search.tablelist.action.InsertNewAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/tl_insertselectedit.do" class="com.genius.search.tablelist.action.InsertSelectEditAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/tl_insertedit.do" class="com.genius.search.tablelist.action.InsertEditAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/tl_delete.do" class="com.genius.search.tablelist.action.DeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <!-- tablefield -->
+  <bean name="/search/tf_select.do" class="com.genius.search.tablefield.action.SelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/tf_insertselectnew.do" class="com.genius.search.tablefield.action.InsertSelectNewAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/tf_insertnew.do" class="com.genius.search.tablefield.action.InsertNewAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/tf_insertselectedit.do" class="com.genius.search.tablefield.action.InsertSelectEditAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/tf_insertedit.do" class="com.genius.search.tablefield.action.InsertEditAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/tf_delete.do" class="com.genius.search.tablefield.action.DeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <!-- searchtype -->
+  <bean name="/search/st_select.do" class="com.genius.search.searchtype.action.SelectAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/st_insertselectnew.do" class="com.genius.search.searchtype.action.InsertSelectNewAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/st_insertnew.do" class="com.genius.search.searchtype.action.InsertNewAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/st_insertselectedit.do" class="com.genius.search.searchtype.action.InsertSelectEditAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/st_insertedit.do" class="com.genius.search.searchtype.action.InsertEditAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/st_delete.do" class="com.genius.search.searchtype.action.DeleteAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <!-- search -->
+  <bean name="/search/HistoryAction.do" class="com.genius.search.search.action.HistoryAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/result.do" class="com.genius.search.search.action.ResultAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/historyaction.do" class="com.genius.search.search.action.HistoryAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/quary.do" class="com.genius.search.search.action.Quary" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/resultex.do" class="com.genius.search.search.action.ResultActionEx" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/Excel.do" class="com.genius.search.search.action.ExcelAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/builderaction.do" class="com.genius.search.search.action.BuilderAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/builderaction1.do" class="com.genius.search.search.action.BuilderAction1" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/search/builderaction2.do" class="com.genius.search.search.action.BuilderAction2" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <!-- search end -->
+  <!-- example start-->
+  <!-- xtree -->
+  <bean name="/CodeSample/xtree/xtreedepartment.do" class="com.genius.CodeSample.xtree.action.XtreeDepartmentAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/CodeSample/xtree/xtreeuser.do" class="com.genius.CodeSample.xtree.action.XtreeUserAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <!-- example end -->
+  <!-- workflow start -->
+  <bean name="/workflow/deployForXml.do" class="com.workflow.definition.DeployForXml" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/workflow/startProcess.do" class="com.workflow.definition.StartProcess" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/workflow/delProcess.do" class="com.workflow.definition.DelProcess" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/workflow/formSubmit.do" class="com.workflow.task.FormSubmit" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/workflow/checkout.do" class="com.workflow.task.CheckOutAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/workflow/getallxml.do" class="com.workflow.definition.ProcessXmlAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/workflow/xmledit.do" class="com.workflow.definition.XmlEdit" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/workflow/savenode.do" class="com.workflow.definition.SaveNodeAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/workflow/initformitem.do" class="com.workflow.task.InitFormItemAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/workflow/getformitem.do" class="com.workflow.task.GetFormItemAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/workflow/pic.do" class="com.workflow.process.PicAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean name="/workflow/usertree.do" class="com.workflow.task.UserTreeAction" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <!-- workflow end -->
+  <bean name="/login.do" class="com.genius.BOSS.login.action.LoginAction" />
+  <bean name="/loginout.do" class="com.genius.BOSS.login.action.LoginOutAction" />
+  <bean name="/menu.do" class="com.genius.BOSS.menu.action.MenuAction" />
+  <bean name="/b_user/select.do" class="com.genius.BOSS.b_user.action.SelectAction" />
+  <bean name="/b_user/selectExcel.do" class="com.genius.BOSS.b_user.action.SelectExcelAction" />
+  <bean name="/b_user/selectPdf.do" class="com.genius.BOSS.b_user.action.SelectPdfAction" />
+  <bean name="/b_user/selectWord.do" class="com.genius.BOSS.b_user.action.SelectWordAction" />
+  <bean name="/b_user/chart.do" class="com.genius.BOSS.b_user.action.ChartAction" />
+  <bean name="/b_user/insertselectnew.do" class="com.genius.BOSS.b_user.action.InsertSelectNewAction" />
+  <bean name="/b_user/insertselectedit.do" class="com.genius.BOSS.b_user.action.InsertSelectEditAction" />
+  <bean name="/b_user/insertselectprint.do" class="com.genius.BOSS.b_user.action.InsertSelectPrintAction" />
+  <bean name="/b_user/hospitalselect.do" class="com.genius.BOSS.b_user.action.HospitalSelectAction" />
+  <bean name="/b_user/departmentselect.do" class="com.genius.BOSS.b_user.action.DepartmentSelectAction" />
+  <bean name="/b_user/job_titleselect.do" class="com.genius.BOSS.b_user.action.Job_titleSelectAction" />
+  <bean name="/b_user/sectionselect.do" class="com.genius.BOSS.b_user.action.SectionSelectAction" />
+  <bean name="/b_user/liaisonsselect.do" class="com.genius.BOSS.b_user.action.LiaisonsSelectAction" />
+  <bean name="/b_user/areaselect.do" class="com.genius.BOSS.b_user.action.AreaSelectAction" />
+  <bean name="/b_user/area_sselect.do" class="com.genius.BOSS.b_user.action.Area_sSelectAction" />
+  <bean name="/b_user/insertnew.do" class="com.genius.BOSS.b_user.action.InsertNewAction" />
+  <bean name="/b_user/insertedit.do" class="com.genius.BOSS.b_user.action.InsertEditAction" />
+  <bean name="/b_user/delete.do" class="com.genius.BOSS.b_user.action.DeleteAction" />
+   <bean name="/verify/select.do" class="com.genius.BOSS.verify.action.SelectAction" />
+  <bean name="/verify/selectExcel.do" class="com.genius.BOSS.verify.action.SelectExcelAction" />
+  <bean name="/verify/selectPdf.do" class="com.genius.BOSS.verify.action.SelectPdfAction" />
+  <bean name="/verify/selectWord.do" class="com.genius.BOSS.verify.action.SelectWordAction" />
+  <bean name="/verify/chart.do" class="com.genius.BOSS.verify.action.ChartAction" />
+  <bean name="/verify/insertselectnew.do" class="com.genius.BOSS.verify.action.InsertSelectNewAction" />
+  <bean name="/verify/insertselectedit.do" class="com.genius.BOSS.verify.action.InsertSelectEditAction" />
+  <bean name="/verify/insertselectprint.do" class="com.genius.BOSS.verify.action.InsertSelectPrintAction" />
+  <bean name="/verify/hospitalselect.do" class="com.genius.BOSS.verify.action.HospitalSelectAction" />
+  <bean name="/verify/departmentselect.do" class="com.genius.BOSS.verify.action.DepartmentSelectAction" />
+  <bean name="/verify/job_titleselect.do" class="com.genius.BOSS.verify.action.Job_titleSelectAction" />
+  <bean name="/verify/sectionselect.do" class="com.genius.BOSS.verify.action.SectionSelectAction" />
+  <bean name="/verify/liaisonsselect.do" class="com.genius.BOSS.verify.action.LiaisonsSelectAction" />
+  <bean name="/verify/areaselect.do" class="com.genius.BOSS.verify.action.AreaSelectAction" />
+  <bean name="/verify/insertnew.do" class="com.genius.BOSS.verify.action.InsertNewAction" />
+  <bean name="/verify/insertedit.do" class="com.genius.BOSS.verify.action.InsertEditAction" />
+  <bean name="/verify/delete.do" class="com.genius.BOSS.verify.action.DeleteAction" />
+  <bean name="/ordinary/select.do" class="com.genius.BOSS.ordinary.action.SelectAction" />
+  <bean name="/ordinary/selectExcel.do" class="com.genius.BOSS.ordinary.action.SelectExcelAction" />
+  <bean name="/ordinary/selectPdf.do" class="com.genius.BOSS.ordinary.action.SelectPdfAction" />
+  <bean name="/ordinary/selectWord.do" class="com.genius.BOSS.ordinary.action.SelectWordAction" />
+  <bean name="/ordinary/chart.do" class="com.genius.BOSS.ordinary.action.ChartAction" />
+  <bean name="/ordinary/insertselectnew.do" class="com.genius.BOSS.ordinary.action.InsertSelectNewAction" />
+  <bean name="/ordinary/insertselectedit.do" class="com.genius.BOSS.ordinary.action.InsertSelectEditAction" />
+  <bean name="/ordinary/insertselectprint.do" class="com.genius.BOSS.ordinary.action.InsertSelectPrintAction" />
+  <bean name="/ordinary/areaselect.do" class="com.genius.BOSS.ordinary.action.AreaSelectAction" />
+  <bean name="/ordinary/insertnew.do" class="com.genius.BOSS.ordinary.action.InsertNewAction" />
+  <bean name="/ordinary/insertedit.do" class="com.genius.BOSS.ordinary.action.InsertEditAction" />
+  <bean name="/ordinary/delete.do" class="com.genius.BOSS.ordinary.action.DeleteAction" />
+  <bean name="/card/select.do" class="com.genius.BOSS.card.action.SelectAction" />
+  <bean name="/card/selectExcel.do" class="com.genius.BOSS.card.action.SelectExcelAction" />
+  <bean name="/card/selectPdf.do" class="com.genius.BOSS.card.action.SelectPdfAction" />
+  <bean name="/card/selectWord.do" class="com.genius.BOSS.card.action.SelectWordAction" />
+  <bean name="/card/chart.do" class="com.genius.BOSS.card.action.ChartAction" />
+  <bean name="/card/insertselectnew.do" class="com.genius.BOSS.card.action.InsertSelectNewAction" />
+  <bean name="/card/insertselectedit.do" class="com.genius.BOSS.card.action.InsertSelectEditAction" />
+  <bean name="/card/insertselectprint.do" class="com.genius.BOSS.card.action.InsertSelectPrintAction" />
+  <bean name="/card/areaselect.do" class="com.genius.BOSS.card.action.AreaSelectAction" />
+  <bean name="/card/insertnew.do" class="com.genius.BOSS.card.action.InsertNewAction" />
+  <bean name="/card/insertedit.do" class="com.genius.BOSS.card.action.InsertEditAction" />
+  <bean name="/card/delete.do" class="com.genius.BOSS.card.action.DeleteAction" />
+  <bean name="/contact/select.do" class="com.genius.BOSS.contact.action.SelectAction" />
+  <bean name="/contact/selectExcel.do" class="com.genius.BOSS.contact.action.SelectExcelAction" />
+  <bean name="/contact/selectPdf.do" class="com.genius.BOSS.contact.action.SelectPdfAction" />
+  <bean name="/contact/selectWord.do" class="com.genius.BOSS.contact.action.SelectWordAction" />
+  <bean name="/contact/chart.do" class="com.genius.BOSS.contact.action.ChartAction" />
+  <bean name="/contact/insertselectnew.do" class="com.genius.BOSS.contact.action.InsertSelectNewAction" />
+  <bean name="/contact/insertselectedit.do" class="com.genius.BOSS.contact.action.InsertSelectEditAction" />
+  <bean name="/contact/insertselectprint.do" class="com.genius.BOSS.contact.action.InsertSelectPrintAction" />
+  <bean name="/contact/areaselect.do" class="com.genius.BOSS.contact.action.AreaSelectAction" />
+  <bean name="/contact/insertnew.do" class="com.genius.BOSS.contact.action.InsertNewAction" />
+  <bean name="/contact/insertedit.do" class="com.genius.BOSS.contact.action.InsertEditAction" />
+  <bean name="/contact/delete.do" class="com.genius.BOSS.contact.action.DeleteAction" />
+  <bean name="/cont_verify/select.do" class="com.genius.BOSS.cont_verify.action.SelectAction" />
+  <bean name="/cont_verify/selectExcel.do" class="com.genius.BOSS.cont_verify.action.SelectExcelAction" />
+  <bean name="/cont_verify/selectPdf.do" class="com.genius.BOSS.cont_verify.action.SelectPdfAction" />
+  <bean name="/cont_verify/selectWord.do" class="com.genius.BOSS.cont_verify.action.SelectWordAction" />
+  <bean name="/cont_verify/chart.do" class="com.genius.BOSS.cont_verify.action.ChartAction" />
+  <bean name="/cont_verify/insertselectnew.do" class="com.genius.BOSS.cont_verify.action.InsertSelectNewAction" />
+  <bean name="/cont_verify/insertselectedit.do" class="com.genius.BOSS.cont_verify.action.InsertSelectEditAction" />
+  <bean name="/cont_verify/insertselectprint.do" class="com.genius.BOSS.cont_verify.action.InsertSelectPrintAction" />
+  <bean name="/cont_verify/areaselect.do" class="com.genius.BOSS.cont_verify.action.AreaSelectAction" />
+  <bean name="/cont_verify/insertnew.do" class="com.genius.BOSS.cont_verify.action.InsertNewAction" />
+  <bean name="/cont_verify/insertedit.do" class="com.genius.BOSS.cont_verify.action.InsertEditAction" />
+  <bean name="/cont_verify/delete.do" class="com.genius.BOSS.cont_verify.action.DeleteAction" />
+    <bean name="/cdsy/select.do" class="com.genius.BOSS.cdsy.action.SelectAction" />
+  <bean name="/cdsy/selectExcel.do" class="com.genius.BOSS.cdsy.action.SelectExcelAction" />
+  <bean name="/cdsy/selectPdf.do" class="com.genius.BOSS.cdsy.action.SelectPdfAction" />
+  <bean name="/cdsy/selectWord.do" class="com.genius.BOSS.cdsy.action.SelectWordAction" />
+  <bean name="/cdsy/chart.do" class="com.genius.BOSS.cdsy.action.ChartAction" />
+  <bean name="/cdsy/insertselectnew.do" class="com.genius.BOSS.cdsy.action.InsertSelectNewAction" />
+  <bean name="/cdsy/insertselectedit.do" class="com.genius.BOSS.cdsy.action.InsertSelectEditAction" />
+  <bean name="/cdsy/insertselectprint.do" class="com.genius.BOSS.cdsy.action.InsertSelectPrintAction" />
+  <bean name="/cdsy/user_idselect.do" class="com.genius.BOSS.cdsy.action.User_idSelectAction" />
+  <bean name="/cdsy/typeselect.do" class="com.genius.BOSS.cdsy.action.TypeSelectAction" />
+  <bean name="/cdsy/departmentselect.do" class="com.genius.BOSS.cdsy.action.DepartmentSelectAction" />
+  <bean name="/cdsy/insertnew.do" class="com.genius.BOSS.cdsy.action.InsertNewAction" />
+  <bean name="/cdsy/insertedit.do" class="com.genius.BOSS.cdsy.action.InsertEditAction" />
+  <bean name="/cdsy/delete.do" class="com.genius.BOSS.cdsy.action.DeleteAction" />
+  <bean name="/cdsy_v/select.do" class="com.genius.BOSS.cdsy_v.action.SelectAction" />
+  <bean name="/cdsy_v/selectExcel.do" class="com.genius.BOSS.cdsy_v.action.SelectExcelAction" />
+  <bean name="/cdsy_v/selectPdf.do" class="com.genius.BOSS.cdsy_v.action.SelectPdfAction" />
+  <bean name="/cdsy_v/selectWord.do" class="com.genius.BOSS.cdsy_v.action.SelectWordAction" />
+  <bean name="/cdsy_v/chart.do" class="com.genius.BOSS.cdsy_v.action.ChartAction" />
+  <bean name="/cdsy_v/insertselectnew.do" class="com.genius.BOSS.cdsy_v.action.InsertSelectNewAction" />
+  <bean name="/cdsy_v/insertselectedit.do" class="com.genius.BOSS.cdsy_v.action.InsertSelectEditAction" />
+  <bean name="/cdsy_v/insertselectprint.do" class="com.genius.BOSS.cdsy_v.action.InsertSelectPrintAction" />
+  <bean name="/cdsy_v/user_idselect.do" class="com.genius.BOSS.cdsy_v.action.User_idSelectAction" />
+  <bean name="/cdsy_v/typeselect.do" class="com.genius.BOSS.cdsy_v.action.TypeSelectAction" />
+  <bean name="/cdsy_v/departmentselect.do" class="com.genius.BOSS.cdsy_v.action.DepartmentSelectAction" />
+  <bean name="/cdsy_v/insertnew.do" class="com.genius.BOSS.cdsy_v.action.InsertNewAction" />
+  <bean name="/cdsy_v/insertedit.do" class="com.genius.BOSS.cdsy_v.action.InsertEditAction" />
+  <bean name="/cdsy_v/delete.do" class="com.genius.BOSS.cdsy_v.action.DeleteAction" />
+  <bean name="/hospital_m/select.do" class="com.genius.BOSS.hospital_m.action.SelectAction" />
+  <bean name="/hospital_m/selectExcel.do" class="com.genius.BOSS.hospital_m.action.SelectExcelAction" />
+  <bean name="/hospital_m/selectPdf.do" class="com.genius.BOSS.hospital_m.action.SelectPdfAction" />
+  <bean name="/hospital_m/selectWord.do" class="com.genius.BOSS.hospital_m.action.SelectWordAction" />
+  <bean name="/hospital_m/chart.do" class="com.genius.BOSS.hospital_m.action.ChartAction" />
+  <bean name="/hospital_m/insertselectnew.do" class="com.genius.BOSS.hospital_m.action.InsertSelectNewAction" />
+  <bean name="/hospital_m/insertselectedit.do" class="com.genius.BOSS.hospital_m.action.InsertSelectEditAction" />
+  <bean name="/hospital_m/insertselectprint.do" class="com.genius.BOSS.hospital_m.action.InsertSelectPrintAction" />
+  <bean name="/hospital_m/insertnew.do" class="com.genius.BOSS.hospital_m.action.InsertNewAction" />
+  <bean name="/hospital_m/insertedit.do" class="com.genius.BOSS.hospital_m.action.InsertEditAction" />
+  <bean name="/hospital_m/delete.do" class="com.genius.BOSS.hospital_m.action.DeleteAction" />
+  <bean name="/medical_r/select.do" class="com.genius.BOSS.medical_r.action.SelectAction" />
+  <bean name="/medical_r/selectExcel.do" class="com.genius.BOSS.medical_r.action.SelectExcelAction" />
+  <bean name="/medical_r/selectPdf.do" class="com.genius.BOSS.medical_r.action.SelectPdfAction" />
+  <bean name="/medical_r/selectWord.do" class="com.genius.BOSS.medical_r.action.SelectWordAction" />
+  <bean name="/medical_r/chart.do" class="com.genius.BOSS.medical_r.action.ChartAction" />
+  <bean name="/medical_r/insertselectnew.do" class="com.genius.BOSS.medical_r.action.InsertSelectNewAction" />
+  <bean name="/medical_r/insertselectedit.do" class="com.genius.BOSS.medical_r.action.InsertSelectEditAction" />
+  <bean name="/medical_r/insertselectprint.do" class="com.genius.BOSS.medical_r.action.InsertSelectPrintAction" />
+  <bean name="/medical_r/insertnew.do" class="com.genius.BOSS.medical_r.action.InsertNewAction" />
+  <bean name="/medical_r/insertedit.do" class="com.genius.BOSS.medical_r.action.InsertEditAction" />
+  <bean name="/medical_r/delete.do" class="com.genius.BOSS.medical_r.action.DeleteAction" />
+  <bean name="/PCbar/select.do" class="com.genius.BOSS.PCbar.action.SelectAction" />
+  <bean name="/PCbar/selectExcel.do" class="com.genius.BOSS.PCbar.action.SelectExcelAction" />
+  <bean name="/PCbar/selectPdf.do" class="com.genius.BOSS.PCbar.action.SelectPdfAction" />
+  <bean name="/PCbar/selectWord.do" class="com.genius.BOSS.PCbar.action.SelectWordAction" />
+  <bean name="/PCbar/chart.do" class="com.genius.BOSS.PCbar.action.ChartAction" />
+  <bean name="/PCbar/insertselectnew.do" class="com.genius.BOSS.PCbar.action.InsertSelectNewAction" />
+  <bean name="/PCbar/insertselectedit.do" class="com.genius.BOSS.PCbar.action.InsertSelectEditAction" />
+  <bean name="/PCbar/insertselectprint.do" class="com.genius.BOSS.PCbar.action.InsertSelectPrintAction" />
+  <bean name="/PCbar/insertnew.do" class="com.genius.BOSS.PCbar.action.InsertNewAction" />
+  <bean name="/PCbar/insertedit.do" class="com.genius.BOSS.PCbar.action.InsertEditAction" />
+  <bean name="/PCbar/delete.do" class="com.genius.BOSS.PCbar.action.DeleteAction" />
+  <bean name="/APPbar/select.do" class="com.genius.BOSS.APPbar.action.SelectAction" />
+  <bean name="/APPbar/selectExcel.do" class="com.genius.BOSS.APPbar.action.SelectExcelAction" />
+  <bean name="/APPbar/selectPdf.do" class="com.genius.BOSS.APPbar.action.SelectPdfAction" />
+  <bean name="/APPbar/selectWord.do" class="com.genius.BOSS.APPbar.action.SelectWordAction" />
+  <bean name="/APPbar/chart.do" class="com.genius.BOSS.APPbar.action.ChartAction" />
+  <bean name="/APPbar/insertselectnew.do" class="com.genius.BOSS.APPbar.action.InsertSelectNewAction" />
+  <bean name="/APPbar/insertselectedit.do" class="com.genius.BOSS.APPbar.action.InsertSelectEditAction" />
+  <bean name="/APPbar/insertselectprint.do" class="com.genius.BOSS.APPbar.action.InsertSelectPrintAction" />
+  <bean name="/APPbar/insertnew.do" class="com.genius.BOSS.APPbar.action.InsertNewAction" />
+  <bean name="/APPbar/insertedit.do" class="com.genius.BOSS.APPbar.action.InsertEditAction" />
+  <bean name="/APPbar/delete.do" class="com.genius.BOSS.APPbar.action.DeleteAction" />
+  <bean name="/medical_j/select.do" class="com.genius.BOSS.medical_j.action.SelectAction" />
+  <bean name="/medical_j/selectExcel.do" class="com.genius.BOSS.medical_j.action.SelectExcelAction" />
+  <bean name="/medical_j/selectPdf.do" class="com.genius.BOSS.medical_j.action.SelectPdfAction" />
+  <bean name="/medical_j/selectWord.do" class="com.genius.BOSS.medical_j.action.SelectWordAction" />
+  <bean name="/medical_j/chart.do" class="com.genius.BOSS.medical_j.action.ChartAction" />
+  <bean name="/medical_j/insertselectnew.do" class="com.genius.BOSS.medical_j.action.InsertSelectNewAction" />
+  <bean name="/medical_j/insertselectedit.do" class="com.genius.BOSS.medical_j.action.InsertSelectEditAction" />
+  <bean name="/medical_j/insertselectprint.do" class="com.genius.BOSS.medical_j.action.InsertSelectPrintAction" />
+  <bean name="/medical_j/insertnew.do" class="com.genius.BOSS.medical_j.action.InsertNewAction" />
+  <bean name="/medical_j/insertedit.do" class="com.genius.BOSS.medical_j.action.InsertEditAction" />
+  <bean name="/medical_j/delete.do" class="com.genius.BOSS.medical_j.action.DeleteAction" />
+</beans>
+

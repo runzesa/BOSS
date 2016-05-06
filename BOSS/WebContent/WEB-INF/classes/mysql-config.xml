@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB2312"?>
+<root>
+  <data>
+    <ccu>127.0.0.1</ccu>
+    <port>3306</port>
+    <user>mas</user>
+    <password>123</password>
+    <useUnicode>true</useUnicode>
+    <characterEncoding>GBK</characterEncoding>
+  </data>
+</root>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB2312"?>
+<genius>
+  <data>
+    <jndi>java:comp/env/jdbc/boss</jndi>
+    <datebaseid>2</datebaseid>
+    <!--0:MicrosoftSqlServer;1:Oracle  -->
+      <database>MySql5.5</database>
+    <servername>127.0.0.1</servername>
+    <databasename>rbac</databasename>
+    <username>root</username>
+    <password>123456</password>
+  </data>
+  <fileupload path="e:/upload" uri="http://localhost:8080/file" />
+</genius>
+

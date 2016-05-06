@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Context path="/BOSS" docBase="BOSS" debug="5" reloadable="true" crossContext="true">
+  <Resource name="jdbc/boss" auth="Container" type="javax.sql.DataSource" maxACTive="100" maxIdle="30" maxWait="10000" driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://101.251.96.250:10027/rbac_test?characterEncoding=UTF-8" username="dzj" password="123" />
+</Context>

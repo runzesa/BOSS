@@ -1,0 +1,8 @@
+/*main nav over state*/
+.right_top_nav ul li a:hover { background:url(../images/logo.gif) no-repeat;}
+/*positioning for sub nav*/
+.right_top_nav ul li a:hover ul {display:block;position:absolute;top:20px;left:0;}
+/*drop-down on state*/
+.right_top_nav ul li a:hover ul li a {display:block;color:#000;background:#fff;line-height:15px;width:120px;}
+/*drop-down over state*/
+.right_top_nav ul li a:hover ul li a:hover {background:#FFE6A0;border: 1px solid #D2B47A;}

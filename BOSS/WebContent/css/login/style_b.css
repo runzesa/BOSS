@@ -1,0 +1,46 @@
+/*定义所有的对象边界为0、填充为0、图片边框为0*/
+*{margin:0;padding:0}
+img{border:0;}
+
+/*定义ul初始样式为none,去掉前面的黑点*/
+ul{list-style:none;}
+
+/*定义不允许有浮动对象*/
+.clear{clear:both;height:0;line-height:0;}
+
+/*定义body、html滚动条样式*/
+body,input{font-family:verdana,sans-serif;font-size:12px;color:#333;}
+html{overflow-x:hidden;height:100%;
+     scrollbar-face-color: #D6E8FF;/*滚动条凸出部分的颜色*/
+     scrollbar-highlight-color:;/*滚动条空白部分的颜色*/
+     scrollbar-shadow-color:#efefef;/*立体滚动条阴影的颜色*/
+     scrollbar-3dlight-color:#ACD1FE;/*滚动条亮边的颜色*/
+     scrollbar-arrow-color:#036CB4;/*上下按钮上三角箭头的颜色*/
+     scrollbar-track-color: #ffffff;/*滚动条的背景颜色*/
+     scrollbar-darkshadow-color: #ACD1FE;/*滚动条强阴影的颜色*/
+     scrollbar-base-color: #e9cfe0;/*滚动条的基本颜色*/
+}
+
+/*定义链接颜色*/
+a,a:visited,a:hover{color:#000; text-decoration:none;}
+
+/* 取消鼠标获得焦点时候的虚线 */
+a{blr:expression(this.onFocus=this.blur());}
+
+/*login.html页面属性*/
+.login_body_bg{background:url(../../images/login/login_b_bg.gif) repeat-x #fff;}
+.login_bg{position:relative;background:url(../../images/login/login_b.jpg) no-repeat;margin:0 auto;width:994px;height:580px;padding:0 30px 0 0;}
+.login_top_link{float:right;margin:55px 0 0 0;color:#333;}
+.login{clear:both;float:right;width:340px;margin:145px 0 0 0;font-size:14px;}
+.login .input{ width:178px; height:20px;margin:0 0 0 8px;vertical-align:middle;border:1px solid #84a1bd;background-color:#e8f9ff;font-size:16px;padding:5px;line-height:18px;font-weight:bold;ime-mode:disabled;}
+.login span{float:left;padding:0 0 0 63px;margin:15px 0 0 0;}
+.login span input{vertical-align:middle;}
+.login_button_div{float:left;width:250px;height:50px;margin:25px 0 0 50px; position:relative;}
+.button1 a{position:absolute;display:block;overflow:hidden;background:url(../../images/login/login_button_pic.gif) no-repeat;}
+.button1 a.info,.button1 a.info:visited{width:86px;height:33px;top:0px;left:0px;background-position: -298px 0px;}
+.button1 a.info:hover{background-position:-199px 0px;}
+.button2 a{position:absolute;display:block;overflow:hidden;background:url(../../images/login/login_button_pic.gif) no-repeat;margin:0 0 0 100px;}
+.button2 a.info1,.button2 a.info1:visited{width:86px;height:33px;top:0px;left:0px;background-position: 0px 0px;}
+.button2 a.info1:hover{background-position:-99px 0px;}
+.news_dt{ position:absolute;top:533px;left:190px;height:29px; line-height:29px;}
+.news_dt1{ position:absolute;top:533px;left:600px;height:29px; line-height:29px;}

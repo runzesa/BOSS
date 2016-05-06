@@ -1,0 +1,10 @@
+
+		
+/*设置文字样式*/
+a            { text-decoration: none; color:  #000000 ;FONT-SIZE: 9pt }		
+a:link       { text-decoration: none; color:  #000000 ;FONT-SIZE: 9pt }
+a:visited    { text-decoration: none; color: #000000 ;FONT-SIZE: 9pt }
+a:active     { text-decoration: none; color:  #0000ff;font-style: italic; font-weight: bold ;FONT-SIZE: 9pt}
+a:hover      { text-decoration: underline; color: #000000 ;FONT-SIZE: 9pt}
+
+

@@ -1,0 +1,62 @@
+/* demo Globe CSS v1.10 by Niko */
+body,div,dl,dt,dd,span,p,table,th,td,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,select,blockquote{ font: normal 12px arial,SimSun,verdana,sans-serif; }
+html{overflow-x:hidden;
+     scrollbar-face-color: #D6E8FF;/*滚动条凸出部分的颜色*/
+     scrollbar-highlight-color:;/*滚动条空白部分的颜色*/
+     scrollbar-shadow-color:#efefef;/*立体滚动条阴影的颜色*/
+     scrollbar-3dlight-color:#ACD1FE;/*滚动条亮边的颜色*/
+     scrollbar-arrow-color:#036CB4;/*上下按钮上三角箭头的颜色*/
+     scrollbar-track-color: #ffffff;/*滚动条的背景颜色*/
+     scrollbar-darkshadow-color: #ACD1FE;/*滚动条强阴影的颜色*/
+     scrollbar-base-color: #e9cfe0;/*滚动条的基本颜色*/
+}
+*{ margin: 0; padding: 0; }
+ul,ol{ list-style-type: none; }
+table{ border-collapse: collapse; }
+img{ border: 0; }
+a{ text-decoration: none; }
+a:link{ color: #000; }
+a:visited{ color: #039; }
+a:hover{ color: #069; text-decoration: underline; }
+a:active{ color: #069; }
+.wFull{ width: 100%; }
+.bcC{ border-collapse: collapse; }
+.bcS{ border-collapse: separate; }
+.cB{ clear: both; }
+.fL{ float: left; }
+.fC{ margin-left: auto; margin-right: auto; }
+.fR{ float: right; }
+.tL{ text-align: left; }
+.tC{ text-align: center; }
+.tR{ text-align: right; }
+.cDefault{ cursor: default; }
+.cHand{ cursor: pointer; }
+.cMove{ cursor: move;padding:2px 0 0 15px;background:url(../img/title_lt.png) no-repeat left top;height:29px;}
+
+/*主页菜单样式*/
+#notice_area{padding:5px 0 5px 0;background-color:#efefef;}
+.noScript{margin:8px auto; width:300px;}
+.navBar{width:100%;height: 25px;border: solid #36c 1px;background-color: #9fc8df; }
+.navBar a{padding-left: 3px;padding-right: 3px;line-height: 25px; }
+.navBar .f1{font: normal 12px verdana,sans-serif;line-height: 25px;color: #333;font-weight: bold; }
+.noticeBar{float:left;color: #000; width:300px;padding:5px 0 0 0;}
+.mArea{ padding-right:10px;}
+.mArea .p1{padding-top: 60px;padding-left: 8px;}
+.mArea .p2{padding:5px 0 0 5px;margin:0 -5px -5px 0;}
+.mArea .w1{ width:20px;padding:2px 0 0 0;background:url(../img/title_ct.png) repeat-x;height:29px;}
+.mArea .w2{ width:30px;padding:2px 0 0 0;background:url(../img/title_rt.png) no-repeat top right;height:29px;}
+.mArea .center_l{width:11px;background:url(../img/center_l.png) repeat-y top right;}
+.mArea .center_c{padding:5px;height:135px;vertical-align:top;}
+.mArea .center_r{width:11px;background:url(../img/center_r.png) repeat-y top left;}
+.mArea .bottom_l{width:11px;height:11px;background:url(../img/bottom_l.png) no-repeat;}
+.mArea .bottom_c{background:url(../img/bottom_c.png) repeat-x;}
+.mArea .bottom_r{width:11px;background:url(../img/bottom_r.png) no-repeat;}
+.mArea .cell1{}
+.mArea .cell2{}
+.mArea .title1{height: 27px; }
+.mArea .mContent{}
+.mArea .mSpace{ position:relative;width: 150px; }
+.setModuleArea{ padding-bottom: 10px;color: #000;border: solid #36c 1px; }
+.setModuleArea .f1{ color: #888;font-weight: bold; }
+.mProxy{ margin:5px 0 10px 10px;height: 8px;overflow: hidden;background-color: #fa8431; }
+.resData{ position: absolute;top: -50px;width: 1px;height: 1px;overflow: hidden; }

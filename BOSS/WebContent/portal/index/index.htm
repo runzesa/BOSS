@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LiuRunze开发平台</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+  <meta http-equiv="Content-Language" content="zh-CN" />
+  <meta http-equiv="imagetoolbar" content="no" />
+  <link rel="stylesheet" type="text/css" href="css/demo_default.css" id="demo_theme" />
+  <script type="text/javascript" src="../jsre.js" classpath="../lib/demo_lib_110.js"></script>
+  <script type="text/javascript" src="../../js/connectionpool.js"></script>
+  <script type="text/javascript" src="../../js/tools.js"></script>
+  <style type="text/css">
+  
+.row1{
+	background-color: #ffffff;
+	font-size: 11px;
+	font-weight: normal;
+	color: #666666;
+	text-decoration: none;
+	text-align: center;
+	height: 22px;
+}
+.row2{
+	background-color: #efefef;
+	font-size: 11px;
+	font-weight: normal;
+	color: #666666;
+	text-decoration: none;
+	text-align: center;
+	height: 22px;
+}
+	
+  </style>
+  <script type="text/javascript">
+  //<![CDATA[
+      _import("com.bluepower.ui.DemoPage");
+	  /**
+	   * 默认模块队列，形如 A1,A2,A3|B1,B2,B3|...
+	   * 本例最多支持四个分栏 AAA|BBB|CCC|DDD
+	   */
+	var sDefault = "简介";
+	var dp = new DemoPage();
+	var sCookie = dp.getStyle("modules");
+	document.oncontextmenu = function(){return false;}
+
+	if(!sCookie || sCookie == ''){
+		sCookie = sDefault;
+		dp.setStyle("modules", sDefault);
+	}
+
+	window.onload = function(){
+		dp.init(sCookie);
+		initModel();
+	}
+	  
+	function initModel(){
+	  	XMLHttp.sendReq('GET', 'initmodel.do','', modelData);
+	}
+	
+	function modelData(xmlObject){
+		var xmlDoc = xmlObject.responseXML;
+		var analysis = xmlDoc.getElementsByTagName("dataAnalysis");
+		var src = document.getElementById("modelarea");
+		for(var i=0;i<analysis.length;++i){
+			var td = document.createElement("td");
+			var input = document.createElement("input");
+			input.setAttribute("type","checkbox");
+			input.setAttribute("id","module_" + analysis[i].getAttribute("modelname"));
+			input.setAttribute("value",analysis[i].getAttribute("name"));
+			var label = document.createElement("leabel");
+			label.setAttribute("for","module_" + analysis[i].getAttribute("modelname"));
+			label.innerText = "  " + analysis[i].getAttribute("name") + "(" + 
+				analysis[i].getAttribute("modelname") + ")";
+			td.appendChild(input);
+			td.appendChild(label);
+			src.appendChild(td);
+		}
+	}
+	
+  //]]>
+  </script>
+</head>
+
+<body scroll="yes" style="overflow-y:auto;" >
+<!--<input type="button" onclick="te()" value="button">-->
+  <!-- START Navigation Bar -->
+      <div id="notice_area" style="display: none">
+      <table class="cB fC">
+	   <tr>
+	   <td>若要应用更改、请单击&quot;<strong>保存</strong>&quot;按钮。</td>
+	   <td><input type="button" value="保存" onclick="dp.saveSetting()" style="width:50px; height:20px;" /></td>
+	   <td>&nbsp;</td>
+	   <td><input type="button" value="取消" onclick="dp.hideEl('notice_area')" style="width:50px; height:20px;"  /></td>
+	   </tr>
+	  </table>
+      </div>
+  <div id="nav_area" class="right_top" style="display: none">
+      <!-- START Notice Bar -->
+      <!-- END Notice Bar -->
+	
+	  <p style="display:none"><a href="javascript:dp.swapDisplay('set_module_area')" title="添加删除模块"><img src="../../images/mkdz.png" />增删模块</a></p> 
+	  <span style="display:none">
+	 	<a href="javascript:dp.setColumn(1);location.reload();" title="1栏">
+	  		<img src="../../images/bullet_add_2.png" />1栏</a> 
+	  	<a href="javascript:dp.setColumn(2);location.reload();" title="2栏">
+	  		<img src="../../images/bullet_add_2.png" />2栏</a> 
+	  	<a href="javascript:dp.setColumn(3);location.reload();" title="3栏">
+	  		<img src="../../images/bullet_add_2.png" />3栏</a> 
+	  	<a href="javascript:dp.setColumn(4);location.reload();" title="4栏" style="display:none;">
+	  		<img src="../../images/bullet_add_2.png" />4栏</a> 
+	  	<a href="javascript:dp.setTheme('default')" title="主题1" style="display:none;">
+	 		 <img src="../../images/bullet_add_2.png" />主题1</a> 
+	  	<a href="javascript:dp.setTheme('blue')" title="主题2" style="display:none;">
+	  		<img src="../../images/bullet_add_2.png" />主题2</a>
+	  	<a href="javascript:dp.setTheme('xmas')" title="主题3" style="display:none;">
+	  		<img src="../../images/bullet_add_2.png" />主题3</a>
+	  </span>
+  </div>
+  <!-- END Navigation Bar -->
+  
+  <noscript>
+    <ul class="noScript">
+	  <li>您需要启用JavaScript！请勿禁用Cookie！</li>
+	</ul>
+  </noscript>
+
+  <!-- START Notice Bar -->
+  <div id="notice_area" class="cB noticeBar" style="display: none">
+    <table class="cB fC">
+	 <tr>
+	   <td>通过拖动、关闭来对您的Portal首页进行自定义。简单拖放就可以重新排列模块，若要应用更改、请单击&quot;<strong>保存</strong>&quot;按钮。</td>
+	   <td><input type="button" value="&nbsp;&nbsp;保&nbsp;存&nbsp;&nbsp;" onclick="dp.saveSetting()" /></td>
+	   <td>&nbsp;</td>
+	   <td><input type="button" value="&nbsp;&nbsp;取&nbsp;消&nbsp;&nbsp;" onclick="dp.hideEl('notice_area')" /></td>
+	 </tr>
+	</table>
+  </div>
+  <!-- END Notice Bar -->
+
+  <!-- START Set Module Area -->
+  <div id="set_module_area" class="cB setModuleArea" style="display: none">
+    <table cellspacing="6" class="cB fC bcS">
+	 <tr>
+	   <td colspan="4" class="f1">备注：本例中默认模块不可删除，新增的模块会直接加到最后一列...</td>
+	 </tr>
+	 <tr id="modelarea">
+		<td>
+	     <input type="checkbox" id="module_profile" value="简介" />&nbsp;
+		 <label for="module_profile">简介(Profile)</label>
+		</td>
+	 </tr>
+	</table>
+	<table class="cB fC">
+	 <tr>
+	   <td><input type="button" value="&nbsp;&nbsp;确&nbsp;定&nbsp;&nbsp;" onclick="dp.setModule()" /></td>
+	   <td>&nbsp;</td>
+	   <td><input type="button" value="&nbsp;&nbsp;取&nbsp;消&nbsp;&nbsp;" onclick="dp.hideEl('set_module_area')" /></td>
+	 </tr>
+	</table>
+  </div>
+  <!-- END Set Module Area -->
+
+</body>
+</html>

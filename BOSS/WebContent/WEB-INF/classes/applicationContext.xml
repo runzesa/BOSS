@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="GB2312"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="http://www.springframework.org/schema/beans    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd    http://www.springframework.org/schema/context    http://www.springframework.org/schema/context/spring-context-3.0.xsd    http://www.springframework.org/schema/aop    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+  <bean id="logAdvice" class="org.genius.log.LogAdvice" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean id="logDataAdvice" class="org.genius.log.LogDataAdvice" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean id="logDatabaseAdvice" class="org.genius.log.LogDatabaseAdvice" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean id="logThrowAdvice" class="org.genius.log.LogThrowAdvice" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean id="powerAdvice" class="org.genius.power.PowerAdvice" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean id="dataConfig" class="org.genius.data.DataConfig" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean id="pageDataConfig" class="org.genius.data.PageDataConfig" abstract="false" scope="singleton" lazy-init="default" autowire="default" />
+  <bean id="dataConfigProxy" class="org.springframework.aop.framework.ProxyFactoryBean" abstract="false" scope="singleton" lazy-init="default" autowire="default">
+    <property name="proxyInterfaces">
+      <value>org.genius.data.IDataConfig</value>
+    </property>
+    <property name="target">
+      <ref bean="dataConfig" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logDataAdvice</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="pageDataConfigProxy" class="org.springframework.aop.framework.ProxyFactoryBean" abstract="false" scope="singleton" lazy-init="default" autowire="default">
+    <property name="proxyInterfaces">
+      <value>org.genius.data.IPageDataConfig</value>
+    </property>
+    <property name="target">
+      <ref bean="pageDataConfig" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logDataAdvice</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="b_user" class="com.genius.BOSS.b_user.B_user" />
+  <bean id="b_userProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.b_user.IB_user</value>
+    </property>
+    <property name="target">
+      <ref bean="b_user" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+   <bean id="verify" class="com.genius.BOSS.verify.Verify" />
+  <bean id="verifyProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.verify.IVerify</value>
+    </property>
+    <property name="target">
+      <ref bean="verify" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="ordinary" class="com.genius.BOSS.ordinary.Ordinary" />
+  <bean id="ordinaryProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.ordinary.IOrdinary</value>
+    </property>
+    <property name="target">
+      <ref bean="ordinary" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="card" class="com.genius.BOSS.card.Card" />
+  <bean id="cardProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.card.ICard</value>
+    </property>
+    <property name="target">
+      <ref bean="card" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="contact" class="com.genius.BOSS.contact.Contact" />
+  <bean id="contactProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.contact.IContact</value>
+    </property>
+    <property name="target">
+      <ref bean="contact" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="cont_verify" class="com.genius.BOSS.cont_verify.Cont_verify" />
+  <bean id="cont_verifyProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.cont_verify.ICont_verify</value>
+    </property>
+    <property name="target">
+      <ref bean="cont_verify" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+   <bean id="cdsy" class="com.genius.BOSS.cdsy.Cdsy" />
+  <bean id="cdsyProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.cdsy.ICdsy</value>
+    </property>
+    <property name="target">
+      <ref bean="cdsy" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="cdsy_v" class="com.genius.BOSS.cdsy_v.Cdsy_v" />
+  <bean id="cdsy_vProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.cdsy_v.ICdsy_v</value>
+    </property>
+    <property name="target">
+      <ref bean="cdsy_v" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="hospital_m" class="com.genius.BOSS.hospital_m.Hospital_m" />
+  <bean id="hospital_mProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.hospital_m.IHospital_m</value>
+    </property>
+    <property name="target">
+      <ref bean="hospital_m" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="medical_r" class="com.genius.BOSS.medical_r.Medical_r" />
+  <bean id="medical_rProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.medical_r.IMedical_r</value>
+    </property>
+    <property name="target">
+      <ref bean="medical_r" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="PCbar" class="com.genius.BOSS.PCbar.PCbar" />
+  <bean id="PCbarProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.PCbar.IPCbar</value>
+    </property>
+    <property name="target">
+      <ref bean="PCbar" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="APPbar" class="com.genius.BOSS.APPbar.APPbar" />
+  <bean id="APPbarProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.APPbar.IAPPbar</value>
+    </property>
+    <property name="target">
+      <ref bean="APPbar" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="medical_j" class="com.genius.BOSS.medical_j.Medical_j" />
+  <bean id="medical_jProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces">
+      <value>com.genius.BOSS.medical_j.IMedical_j</value>
+    </property>
+    <property name="target">
+      <ref bean="medical_j" />
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>logAdvice</value>
+        <value>logDatabaseAdvice</value>
+        <value>powerAdvice</value>
+      </list>
+    </property>
+  </bean>
+</beans>
+
